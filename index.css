@@ -1,0 +1,25 @@
+body {
+  position: relative;
+  overflow-x: hidden; /* Impede barra de rolagem horizontal */
+}
+
+/* Animação de queda */
+@keyframes fall {
+  to { transform: translateY(100vh); }
+}
+
+/* Emojis laterais - pré-definidos */
+.emoji-side {
+  position: fixed;
+  font-size: 20px;
+  animation: fall 10s linear infinite;
+  pointer-events: none;
+  z-index: 100;
+}
+
+/* Posições e delays individuais */
+.emoji-side:nth-child(1) { left: 5%; animation-delay: 0s; }
+.emoji-side:nth-child(2) { right: 8%; animation-delay: 2s; }
+.emoji-side:nth-child(3) { left: 3%; animation-delay: 4s; }
+.emoji-side:nth-child(4) { right: 5%; animation-delay: 6s; }
+.emoji-side:nth-child(5) { left: 10%; animation-delay: 8s; }
